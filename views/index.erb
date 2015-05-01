@@ -1,0 +1,9 @@
+<h1>DICTIONARY</h1>
+
+<ul>
+  <% @dictionary_list.each() do |single_word| %>
+    <li><%= single_word.word() %></li>
+  <% end %>
+</ul>
+
+<p><a href='/new_word_form'>Click here to add a new word!</a></p>
