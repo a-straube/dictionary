@@ -6,4 +6,6 @@ By Axel Straube
 Instructions:
 Run 'bundle' to install required gems.
 
+PROGRAM INCOMPLETE: does not allow for adding definitions, work in progress.
+
 MIT license
