@@ -19,3 +19,13 @@ post('/new_word') do
   @dictionary_list = Word.all()
   erb(:index)
 end
+
+get('/:id') do
+  erb(:word_definition)
+end
+
+post('/new_definition') do
+  definition = params.fetch('new_definition')
+  word_definition = Definition.new(definition)
+  erb(:word_definition)
+end
