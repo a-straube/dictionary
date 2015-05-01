@@ -2,7 +2,7 @@
 
 <ul>
   <% @dictionary_list.each() do |single_word| %>
-    <li><%= single_word.word() %></li>
+    <li><a href='/<%=single_word.id().to_s()%>'><%= single_word.word() %></a></li>
   <% end %>
 </ul>
 
