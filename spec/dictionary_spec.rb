@@ -2,6 +2,9 @@ require('rspec')
 require('dictionary')
 
 describe(Word) do
+  before do
+    Word.clear()
+  end
 
   describe('#word') do
     it('returns a new word') do
@@ -20,4 +23,13 @@ describe(Word) do
     end
   end
 
+  describe('#id') do
+    it('returns the id number of a word entered') do
+      new_word = Word.new("cheese")
+      new_word.save()
+      new_word2 = Word.new("baseball")
+      new_word2.save()
+      expect(new_word2.id()).to(eq(2))
+    end
+  end
 end

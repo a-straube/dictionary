@@ -3,6 +3,7 @@ class Word
 
   define_method(:initialize) do |word|
     @word = word
+    @word_id = @@all_words.length().+(1)
   end
 
   define_method(:word) do
@@ -20,7 +21,14 @@ class Word
   define_singleton_method(:clear) do
     @@all_words = []
   end
+
+  define_method(:id) do
+    @word_id
+  end
 end
 
 class Definition
+  define_method(:initialize) do |definition|
+    @definition = definition
+  end
 end
